@@ -7,7 +7,7 @@ class Tree {
  private:
   std::vector<Tree*> child;
   char symb;
-  
+
   explicit Tree(char temp) : symb(temp) {}
   void addNode(std::vector<char> arr) {
     for (int i = 0; i < arr.size(); i++) {
@@ -17,7 +17,7 @@ class Tree {
       child[i]->addNode(temp);
     }
   }
-  
+
  public:
   explicit Tree(std::vector<char> vect) {
     symb = '*';
@@ -34,4 +34,4 @@ class Tree {
   }
 };
 
-  #endif  // INCLUDE_TREE_H_
+#endif  // INCLUDE_TREE_H_
