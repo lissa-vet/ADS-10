@@ -21,6 +21,6 @@ std::vector<char> getPerm(const Tree& tree, int n) {
   res.push_back(tree[n / tmp].get_symb());
   std::vector<char> a = getPerm(tree[n / tmp], n % tmp);
   res.insert(res.end(), a.begin(), a.end());
-  
+
   return res;
 }
